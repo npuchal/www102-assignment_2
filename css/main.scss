@@ -1,0 +1,269 @@
+@import "partials/_functions.scss";
+@import "partials/_variables.scss";
+@import "partials/_mixins.scss";
+$fa-font-path: "../webfonts";
+@import "vendor/font-awesome/fa-regular.scss";
+@import "vendor/font-awesome/fa-solid.scss";
+@import "vendor/font-awesome/fa-brands.scss";
+@import "vendor/font-awesome/fontawesome.scss";
+
+body {
+  font-family: $body-font;
+  background: linear-gradient(to bottom right, $np-white, $np-light-pink);
+}
+
+header {
+  text-align: center;
+
+  > img {
+    width: 10%;
+    height: auto;
+  }
+}
+
+.logo img {
+  padding: calc-rem(20) calc-rem(20) 0;
+  margin-bottom: 0;
+}
+
+h1 {
+  text-transform: lowercase;
+  font-size: $h1-size;
+}
+
+h2 {
+  font-size: $h2-size;
+}
+
+h2#pastproj {
+  color: $np-deep-pink;
+}
+
+h3 {
+  font-size: $h3-size;
+}
+
+h3#help {
+  font-size: $h3-help-size;
+  margin-bottom: 0;
+}
+
+h3#question {
+  color: $np-deep-pink;
+  font-size: $h3-question-size;
+}
+
+.links a {
+  @include links;
+}
+
+nav {
+  text-transform: uppercase;
+  font-family: $np-link-font;
+
+  > ul {
+    @include list-unstyled;
+    @include flex;
+    flex-wrap: wrap;
+
+    > li {
+      flex-basis: 25%;
+
+      > a {
+        @include nav-link($np-light-grey, $np-white, calc-rem(20));
+      }
+    }
+  }
+}
+
+.container {
+  @include container;
+  background: $np-white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container.about p {
+  display: inline-block;
+  float: left;
+  padding-left: calc-rem(30);
+  vertical-align: middle;
+  text-align: left;
+  max-width: 60%;
+
+  > a {
+    color: $np-deep-pink;
+  }
+}
+
+img#natalie {
+  display: inline-block;
+  float: left;
+  vertical-align: middle;
+  width: 30%;
+  height: auto;
+  border-radius: calc-rem(20);
+}
+
+.splash {
+  background-image: url("../images/pink-desktop.jpg");
+  background-size: 120%;
+  background-attachment: fixed;
+  background-position: top;
+  padding: 10% 50% 10% 10%;
+  border-radius: calc-rem(20);
+  text-align: left;
+  margin-bottom: calc-rem(50);
+
+  > button {
+    background-color: $np-deep-pink;
+    color: $np-white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: $body-size;
+    border: none;
+    border-radius: calc-rem(20);
+    padding: calc-rem(10) calc-rem(30);
+    @include transition;
+
+    > a {
+      @include anchor;
+    }
+  }
+}
+
+.outside {
+  @include flex;
+  flex-direction: row;
+  padding: 0 2% 2%;
+}
+
+.inside {
+  @include inline-flex;
+  flex-direction: column;
+  padding: 2%;
+
+  h4 {
+    color: $np-deep-pink;
+    margin-bottom: 0;
+  }
+}
+
+.projects img {
+  @include inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 49%;
+  height: auto;
+  transition: all 0.5s;
+
+  &:hover {
+    transition: all 1s;
+    opacity: 0.33;
+  }
+}
+
+footer {
+  clear: left;
+  @include container;
+  padding: calc-rem(30) calc-rem(30) calc-rem(10);
+  background: $np-dark-grey;
+  color: $np-light-grey;
+  text-align: center;
+
+  > img {
+    width: 80%;
+    height: auto;
+    margin: calc-rem(20) calc-rem(20) calc-rem(10);
+  }
+
+  > .socials {
+    > a {
+      @include socials-link;
+      text-transform: uppercase;
+    }
+  }
+}
+
+a#top {
+  @include socials-link;
+  font-size: $link-size;
+  text-transform: uppercase;
+  padding-top: 0;
+}
+// Mint Theme
+$mint-theme: false;
+@if $mint-theme == true {
+  body {
+    background: linear-gradient(to bottom right, $np-white, $np-mint);
+  }
+} @else {
+  body {
+    background: linear-gradient(to bottom right, $np-white, $np-light-pink);
+  }
+}
+// Media Query
+@media only screen and (max-width: 720px) {
+  nav {
+    text-transform: uppercase;
+    font-family: $np-link-font;
+
+    > ul {
+      @include list-unstyled;
+      @include flex;
+      flex-wrap: wrap;
+
+      > li {
+        flex-basis: 100%;
+
+        > a {
+          @include nav-link($np-light-grey, $np-white, calc-rem(20));
+        }
+      }
+    }
+  }
+}
+
+// What is SASS?
+/* SASS (Syntactically Awesome Style Sheets) is a CSS preprocessor that adds new features into regular CSS through compiling.[1] The goal is to make coding easier and more intuitive for the user, while simplifying code in the process through the use of variables (which include functions), nesting, and mixins, which are essentially chunks of code that can be re-used over and over again.
+
+SASS offers developers two syntax options: indented SASS (which uses the .sass extension) and SCSS (which uses the .scss extension).[1] For many beginners, SCSS can be easier to understand, due to the use of curly brackets, which are forgone in SASS. */
+
+// Data types in SASS
+/* SASS, like any other programming language, offers the use of data types, which essentially classify different types of data into 8 categories: nulls, booleans, numbers, strings, colours, lists, and maps (no, not THOSE maps).
+
+1. Nulls:
+Nulls, in essence, represent nothing. It has no value, no meaning, nothing at all. That being said, nulls are commonly used to define an empty state, such as defining a variable without a value.[2]
+
+2. Booleans:
+Booleans do hold value, but only two: true or false! If the code sees anything besides false or null, SASS will evaluate it as “true.” Booleans can be used in combination with evaluators to form if, if else, and if else if statements, which act as conditionals (ie. if x is true, then run y code).[3]
+
+3. Numbers:
+Numbers are quite simply numbers. They’re usually presented with some form of unit (px, rem, etc.), but as an added bonus, you can also perform basic math (addition, subtraction, multiplication, division) on them with SASS![3] This is particularly handy for making custom functions, such as calculating rems from pixels.
+
+4. Strings:
+Strings are often used to set font styles and other properties in SASS, just as in CSS.[3] These data types can be both quoted and unquoted, however best practices dictate the use of hyphenatednames, like-this (you can also use CamelCase or snake_case).[4]
+
+5. Colours:
+Just like with numbers, colours are just colours. As with in CSS, you can define colours with hex values, rgb, rgba, etc. or use built-in colours like red or slategrey. SASS does offer one more use for this data type - colour mixing! Due to the capability of performing basic math, SASS allows you to mix colours together with basic operations.[3]
+
+6. Lists:
+Lists, or more commonly “arrays” in other programming languages, are statements with multiple values stored in them, separated by a comma list. You can also have multi-lists separated by commas![3]
+
+7. Maps:
+No, these are not your typical maps. Maps are basically a way of creating a list with items that are labelled, so that you can store more complex data. In order to select a map item, one needs to use the mapget() function, which requires the map name and list item. [5]
+
+8. Functions:
+Functions take in various pieces of code, process them, and spit out a result in the form of a single value.[6] Functions can do anything from converting units to darkening a background, so long as you set the parameters correctly.
+
+[1] https://www.creativebloq.com/web-design/what-is-sass-111517618
+[2] https://www.sitepoint.com/sass-reference/null/
+[3] https://www.sitepoint.com/data-types-in-sass/
+[4] https://sass-lang.com/styleguide/code
+[5] https://www.iambacon.co.uk/blog/how-to-use-sass-maps
+[6] https://vanseodesign.com/css/custom-sass-functions/ */
+
+/* Plagerism Checks
+https://smallseotools.com/plagiarism-checker/ - 100% unique
+https://www.quetext.com/ - No plagiarism detected */ 

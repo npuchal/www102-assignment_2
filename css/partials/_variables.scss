@@ -1,0 +1,117 @@
+
+// Colors
+$np-black: rgba(5, 5, 5, 1);
+$np-dark-grey: rgba(49, 49, 49, 1);
+$np-light-grey: rgba(151, 151, 151, 1);
+$np-deep-pink: rgba(220, 74, 102, 1);
+$np-light-pink: rgba(250, 197, 207, 1);
+$np-peach: rgba(248, 178, 177, 1);
+$np-white: rgba(255, 255, 255, 1);
+
+$np-mint: rgba(224, 242, 233, 1);
+$np-pink-highlight: rgba(200, 90, 123, 1);
+
+
+// Color locations
+$body-bg: $np-light-pink;
+$body-color: $np-black;
+
+
+// Fonts
+@font-face {
+    font-family: 'encode_sans_condensedbold';
+    src: url('../webfonts/text-fonts/encodesanscondensed-bold-webfont.eot');
+    src: url('../webfonts/text-fonts/encodesanscondensed-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/text-fonts/encodesanscondensed-bold-webfont.woff2') format('woff2'),
+         url('../webfonts/text-fonts/encodesanscondensed-bold-webfont.woff') format('woff'),
+         url('../webfonts/text-fonts/encodesanscondensed-bold-webfont.ttf') format('truetype'),
+         url('../webfonts/text-fonts/encodesanscondensed-bold-webfont.svg#encode_sans_condensedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'encode_sans_condensedmedium';
+    src: url('../webfonts/text-fonts/encodesanscondensed-medium-webfont.eot');
+    src: url('../webfonts/text-fonts/encodesanscondensed-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/text-fonts/encodesanscondensed-medium-webfont.woff2') format('woff2'),
+         url('../webfonts/text-fonts/encodesanscondensed-medium-webfont.woff') format('woff'),
+         url('../webfonts/text-fonts/encodesanscondensed-medium-webfont.ttf') format('truetype'),
+         url('../webfonts/text-fonts/encodesanscondensed-medium-webfont.svg#encode_sans_condensedmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'encode_sans_condensedregular';
+    src: url('../webfonts/text-fonts/encodesanscondensed-regular-webfont.eot');
+    src: url('../webfonts/text-fonts/encodesanscondensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/text-fonts/encodesanscondensed-regular-webfont.woff2') format('woff2'),
+         url('../webfonts/text-fonts/encodesanscondensed-regular-webfont.woff') format('woff'),
+         url('../webfonts/text-fonts/encodesanscondensed-regular-webfont.ttf') format('truetype'),
+         url('../webfonts/text-fonts/encodesanscondensed-regular-webfont.svg#encode_sans_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latobold';
+    src: url('../webfonts/text-fonts/lato-bold-webfont.eot');
+    src: url('../webfonts/text-fonts/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/text-fonts/lato-bold-webfont.woff2') format('woff2'),
+         url('../webfonts/text-fonts/lato-bold-webfont.woff') format('woff'),
+         url('../webfonts/text-fonts/lato-bold-webfont.ttf') format('truetype'),
+         url('../webfonts/text-fonts/lato-bold-webfont.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latoitalic';
+    src: url('../webfonts/text-fonts/lato-italic-webfont.eot');
+    src: url('../webfonts/text-fonts/lato-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/text-fonts/lato-italic-webfont.woff2') format('woff2'),
+         url('../webfonts/text-fonts/lato-italic-webfont.woff') format('woff'),
+         url('../webfonts/text-fonts/lato-italic-webfont.ttf') format('truetype'),
+         url('../webfonts/text-fonts/lato-italic-webfont.svg#latoitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../webfonts/text-fonts/lato-regular-webfont.eot');
+    src: url('../webfonts/text-fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/text-fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../webfonts/text-fonts/lato-regular-webfont.woff') format('woff'),
+         url('../webfonts/text-fonts/lato-regular-webfont.ttf') format('truetype'),
+         url('../webfonts/text-fonts/lato-regular-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$np-link-font: 'encode_sans_condensedmedium', sans-serif;
+$np-body-font: 'latoregular', sans-serif;
+
+
+// Font locations
+$body-font: $np-body-font;
+$heading-1-font: $np-body-font;
+$heading-font: $np-body-font;
+$link-font: $np-link-font;
+
+
+// Font sizes
+$h1-size: calc-rem(18);
+$h2-size: calc-rem(24);
+$h3-size: calc-rem(20);
+$h3-help-size: calc-rem(24);
+$h3-question-size: calc-rem(24);
+$body-size: calc-rem(16);
+$link-size: calc-rem(14);

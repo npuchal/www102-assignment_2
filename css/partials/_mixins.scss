@@ -1,0 +1,85 @@
+@mixin container($width: calc-rem(1100)) {
+  box-sizing: border-box;
+  max-width: $width;
+  margin: auto;
+  padding: 2%;
+}
+
+
+// NAV Mixins
+@mixin list-unstyled {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin nav-link ($bg, $text, $padding) {
+  display: block;
+  background: $bg;
+  color: $text;
+  text-decoration: none;
+  padding: $padding;
+  transition: all .5s;
+
+  &:hover {
+    transition: all 1s;
+    background: darken($bg, 20%);
+  }
+}
+
+@mixin socials-link {
+  font-family: $np-link-font;
+  display: inline-block;
+  text-decoration: none;
+  padding: calc-rem(30);
+  color: $np-light-grey;
+  transition: all .5s;
+
+  &:hover {
+    transition: all 1s;
+    color: $np-deep-pink;
+  }
+}
+
+@mixin anchor {
+  text-decoration: none;
+  color: $np-white;
+  padding: calc-rem(15);
+}
+
+@mixin transition {
+  transition: all .5s;
+
+  &:hover {
+    transition: all 1s;
+    background-color: darken($np-deep-pink, 20%);
+  }
+}
+
+@mixin links {
+  display: inline-block;
+  text-decoration: none;
+  padding: calc-rem(10);
+  padding-top: calc-rem(5);
+  padding-bottom: calc-rem(30);
+  font-size: calc-rem(16);
+  color: $np-black;
+  transition: all .5s;
+
+  &:hover {
+    transition: all 1s;
+    color: $np-deep-pink;
+  }
+}
+
+@mixin flex {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+@mixin inline-flex {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+}
